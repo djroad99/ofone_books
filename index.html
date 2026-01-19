@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1500">
+    <!-- 브라우저 뷰포트 너비를 1360px로 고정하여 페이지를 그리도록 설정 -->
+    <title>Ofone Books</title>
+    <!-- favicon -->
+    <!-- font: Pretendard -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+
+        <div id="section1">
+
+            <div id="header">
+
+                <div class="inner_header">
+
+                    <h1 class="logo"><a href="#"><img src="./images/logo-ofone-black.png" alt="logo-ofone-black"></a>
+                    </h1>
+                    <!-- logo -->
+
+                    <ul class="gnb">
+                        <!-- 1행 -->
+                        <li><a href="#">오늘의 오브</a></li><!-- MENU1 -->
+                        <li><a href="#">플레이리스트</a></li><!-- MENU2 -->
+                        <li><a href="#">북테크 AI</a></li><!-- MENU3 -->
+                        <li><a href="#">서치라이트</a></li><!-- MENU4 -->
+                        <li><a href="#">북티클럽</a></li><!-- MENU5 -->
+                    </ul> <!-- gnb -->
+
+                    <ul class="util">
+
+                        <li><a href="#"><img src="./images/gnb-character.png" alt="gnb-character"></a></li>
+
+                        <li><img src="./images/gnb-icon-ad.svg" alt="gnb-icon-ad"></li>
+
+                        <li><a href="#">
+                                <p>감정이 생기는
+                                    <br>
+                                    매커니즘의 재발견!
+                                </p>
+                            </a></li>
+
+                        <li><img src="./images/gnb-icon-line-vertical.svg" alt="gnb-icon-line-vertical" class="spacing">
+                        </li>
+
+                        <li><a href="#" class="spacing">오브워너+</a></li>
+
+                        <li><a href="#" class="spacing" id="login-btn">로그인</a></li>
+
+                    </ul> <!-- util -->
+
+                </div><!-- inner_header -->
+
+            </div> <!-- #header -->
+
+        </div><!-- #section1 -->
+
+        <div id="section2">
+
+            <div id="header">
+
+                <div class="inner_header">
+
+                    <ul class="gnb">
+                        <!-- 2행 -->
+                        <li><a href="#">추천</a></li>
+                        <li><a href="#">공모전</a></li>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">회사소개</a></li>
+                    </ul> <!-- gnb -->
+
+                    <ul class="util">
+
+                        <form action="/search" method="get">
+                            <input type="text" name="query" id="search">
+                        </form>
+
+                        <li><a href="#"><img src="./images/gnb-icon-menu.svg" alt="gnb-icon-menu"></a></li>
+                    </ul>
+
+
+                </div><!-- inner_header -->
+
+            </div> <!-- #header -->
+
+        </div><!-- #section2 -->
+
+        <div id="visual_banner">
+
+            <div class="border"></div><!-- border -->
+
+            <div class="banner">
+                <!-- Swiper -->
+
+                <div class="swiper mySwiper">
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./images/banner_01.png" alt="배너1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/banner_02.png" alt="배너2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./images/banner_03.png" alt="배너3">
+                        </div>
+                    </div><!-- swiper-wrapper -->
+
+                </div><!-- swiper mySwiper -->
+
+            </div><!-- #banner -->
+
+        </div><!-- visual_banner -->
+
+        <div id="section3">
+            <!-- 왼쪽: 소셜 피드 -->
+            <div class="left-section" data-aos="fade-right" data-aos-duration="1500" >
+                <ul class="tab-nav-list">
+                    <li class="on">
+                        <a href="#" data-tab="x">
+                            <img src="./images/icon-sns-x.svg" alt="sns-x">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-tab="ofone">
+                            <img src="./images/icon-sns-ofone.svg" alt="ofone">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-tab="threads">
+                            <img src="./images/icon-sns-threads.svg" alt="threads">
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="feed-container">
+
+                    <div class="feed-content active" id="x-feed">
+                        <ul class="tab-info-title">
+                            <li>5분 전</li>
+                            <li>X 에서 @오브원북스를 태그한 게시물</li>
+                        </ul>
+                        <div class="post-card">
+                            <div class="post-image-side">
+                                <img src="./images/img-books-haru.png" alt="">
+                            </div>
+                            <div class="post-content-container">
+                                <div class="user">
+                                    <img src="./images/icon-reviewer-bear-medium.svg" alt="">
+                                    <p>뚠곰없이둔잔한곰이
+                                        <span>@ddunggom2</span>
+                                    </p>
+                                </div>
+
+                                <ul class="post-title">
+                                    <li>하루의 취향</li>
+                                    <li>김민철 에세이</li>
+                                </ul>
+
+                                <p class="post-text-side">
+                                    퇴근하고 이 글 읽다가 정신 번쩍 들었음. 내 하루에 남긴 ‘좋아함’이 뭐였는지 10분째 생각 중…하나도 안 떠오르는 게 제일 무섭다. 취향은 돈 드는
+                                    취미가 아니라 그냥 ‘좋았다’고 적어두는 용기일지도. #하루의취향 #에세이 #오브원챌린지
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- .feed-content -->
+                    <div class="feed-content" id="ofone-feed">
+                        <ul class="tab-info-title">
+                            <li>5분 전</li>
+                            <li>X 에서 @오브원북스를 태그한 게시물</li>
+                        </ul>
+                        <div class="post-card">
+                            <div class="post-image-side">
+                                <img src="./images/img-books-haru.png" alt="">
+                            </div>
+                            <div class="post-content-container">
+                                <div class="user">
+                                    <img src="./images/icon-reviewer-bear-medium.svg" alt="">
+                                    <p>뚠곰없이둔잔한곰이
+                                        <span>@ddunggom2</span>
+                                    </p>
+                                </div>
+
+                                <ul class="post-title">
+                                    <li>하루의 취향</li>
+                                    <li>김민철 에세이</li>
+                                </ul>
+
+                                <p class="post-text-side">
+                                    퇴근하고 이 글 읽다가 정신 번쩍 들었음. 내 하루에 남긴 ‘좋아함’이 뭐였는지 10분째 생각 중…하나도 안 떠오르는 게 제일 무섭다. 취향은 돈 드는
+                                    취미가 아니라 그냥 ‘좋았다’고 적어두는 용기일지도. #하루의취향 #에세이 #오브원챌린지
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- .feed-content -->
+                    <div class="feed-content" id="threads-feed">
+                        <ul class="tab-info-title">
+                            <li>5분 전</li>
+                            <li>X 에서 @오브원북스를 태그한 게시물</li>
+                        </ul>
+                        <div class="post-card">
+                            <div class="post-image-side">
+                                <img src="./images/img-books-haru.png" alt="">
+                            </div>
+                            <div class="post-content-container">
+                                <div class="user">
+                                    <img src="./images/icon-reviewer-bear-medium.svg" alt="">
+                                    <p>뚠곰없이둔잔한곰이
+                                        <span>@ddunggom2</span>
+                                    </p>
+                                </div>
+
+                                <ul class="post-title">
+                                    <li>하루의 취향</li>
+                                    <li>김민철 에세이</li>
+                                </ul>
+
+                                <p class="post-text-side">
+                                    퇴근하고 이 글 읽다가 정신 번쩍 들었음. 내 하루에 남긴 ‘좋아함’이 뭐였는지 10분째 생각 중…하나도 안 떠오르는 게 제일 무섭다. 취향은 돈 드는
+                                    취미가 아니라 그냥 ‘좋았다’고 적어두는 용기일지도. #하루의취향 #에세이 #오브원챌린지
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- .feed-content -->
+                </div>
+            </div>
+
+
+            <!-- 오른쪽: 카드 섹션 (총 4개, 이미지 크기 조정) -->
+            <div class="right-section" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="400">
+                <div class="filter-controls">
+                    <button class="filter-btn">
+                        <img src="./images/icon-emoji-love.svg" alt="">
+                        몽글몽글 로맨스
+                    </button>
+                    <button class="filter-btn">
+                        <img src="./images/icon-emoji-shock.svg" alt="">
+                        쫄깃쫄깃 스릴러
+                    </button>
+                    <button class="filter-btn">
+                        <img src="./images/icon-emoji-sad.svg" alt="">
+                        흐물흐물 멜로
+                    </button>
+                    <button class="filter-btn">
+                        <img src="./images/icon-emoji-fun.svg" alt="">
+                        와삭바삭 판타지
+                    </button>
+
+                </div>
+
+                <ul class="cards-grid">
+                    <li class="book-card">
+                        <div class="card-content-wrap">
+                            <div class="book-cover">
+                                <img src="./images/section3_book01.png" alt="">
+                            </div>
+                            <div class="book-info">
+                                <div class="card-category">
+                                    <img src="./images/icon-reviewer-dog-small.svg" alt="">
+                                    <p>몽땅짜리지우개</p>
+                                </div>
+                                <p class="book-title">미 비포 유 <span>조조 모예스</span></p>
+                                <p class="book-desc">영화 먼저 보고 책 읽은 1인인데 엔딩 알고 봤는데도 왜 울지…? #미비포유 #로맨스 #오브원챌린지</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="book-card">
+                        <div class="card-content-wrap">
+                            <div class="book-cover">
+                                <img src="./images/section3_book02.png" alt="">
+                            </div>
+                            <div class="book-info">
+                                <div class="card-category">
+                                    <img src="./images/icon-reviewer-duck-small.svg" alt="">
+                                    <p>오리가아싸의모험</p>
+                                </div>
+                                <p class="book-title">가면산장 살인사건 <span>히가시노 게이고</span></p>
+                                <p class="book-desc">절대 평화롭게 끝날 수 없다… #추리소설추천 #오브원챌린지</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="book-card">
+                        <div class="card-content-wrap">
+                            <div class="book-cover">
+                                <img src="./images/section3_book03.png" alt="">
+                            </div>
+                            <div class="book-info">
+                                <div class="card-category">
+                                    <img src="./images/icon-reviewer-book-small.svg" alt="">
+                                    <p>북팅이밤팅이</p>
+                                </div>
+                                <p class="book-title">나를 보내지 마<span>가즈오 이시구로</span></p>
+                                <p class="book-desc">딱히 울라고 강요하는 장면이 없는데 결국 무너뜨림… #나를보내지마</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="book-card">
+                        <div class="card-content-wrap">
+                            <div class="book-cover">
+                                <img src="./images/section3_book04.png" alt="">
+                            </div>
+                            <div class="book-info">
+                                <div class="card-category">
+                                    <img src="./images/icon-reviewer-duck-small.svg" alt="">
+                                    <p>오리가아싸의모험</p>
+                                </div>
+                                <p class="book-title">가면산장 살인사건 <span>히가시노 게이고</span></p>
+                                <p class="book-desc">절대 평화롭게 끝날 수 없다… #추리소설추천 #오브원챌린지</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- #section3 -->
+
+        <div id="section4">
+            <h3 data-aos="fade-down" data-aos-duration="1500" >오늘의 오브</h3>
+
+            <!-- 슬라이더 영역 -->
+            <div class="swiper bookSwiper" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                <div class="swiper-wrapper">
+                    <!-- 반복되는 카드 아이템들 -->
+                    <div class="swiper-slide">
+                        <div class="book-item-card">
+                            <img src="./images/today_book01.png" alt="Book 1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-item-card">
+                            <img src="./images/today_book02.png" alt="Book 2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-item-card">
+                            <img src="./images/today_book03.png" alt="Book 3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-item-card">
+                            <img src="./images/today_book04.png" alt="Book 4">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-item-card">
+                            <img src="./images/today_book05.png" alt="Book 5">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-item-card">
+                            <img src="./images/today_book06.png" alt="Book 6">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-item-card">
+                            <img src="./images/today_book07.png" alt="Book 7">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-item-card">
+                            <img src="./images/today_book08.png" alt="Book 8">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-item-card">
+                            <img src="./images/today_book09.png" alt="Book 9">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book-item-card">
+                            <img src="./images/today_book10.png" alt="Book 10">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 하단 컨트롤러 -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+        </div><!-- #section4 -->
+
+
+        <div id="section5">
+            <h3 data-aos="fade-down" data-aos-duration="1500">
+                <img src="./images/icon-spark.png" alt="">
+                지금 오브원에 등장!
+                <img src="./images/icon-spark.png" alt="">
+            </h3>
+
+            <ul class="icon_btn_list">
+                <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><!-- 1 -->
+                    <a href="#">
+                        <div class="icon_btn_wrap">
+                            <img src="./images/icon_btn_01.png" alt="">
+                        </div>
+                        <p>
+                            #오늘부터 챌린지
+                        </p>
+                    </a>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><!-- 2 -->
+                    <a href="#">
+                        <div class="icon_btn_wrap">
+                            <img src="./images/icon_btn_02.png" alt="">
+                        </div>
+                        <p>
+                            오브원 공모전
+                        </p>
+                    </a>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><!-- 3 -->
+                    <a href="#">
+                        <div class="icon_btn_wrap">
+                            <img src="./images/icon_btn_03.png" alt="">
+                        </div>
+                        <p>
+                            오디오북
+                        </p>
+                    </a>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800"><!-- 4 -->
+                    <a href="#">
+                        <div class="icon_btn_wrap">
+                            <img src="./images/icon_btn_04.png" alt="">
+                        </div>
+                        <p>
+                            신간 공개
+                        </p>
+                    </a>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000"><!-- 5 -->
+                    <a href="#">
+                        <div class="icon_btn_wrap">
+                            <img src="./images/icon_btn_05.png" alt="">
+                        </div>
+                        <p>
+                            이달의 쿠폰 헌터
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div><!-- #section5 -->
+
+        <div id="section6">
+            <h3 data-aos="fade-down" data-aos-duration="1500">
+                <img src="./images/icon-spark.png" alt="">
+                신규 콘텐츠 오픈!
+                <img src="./images/icon-spark.png" alt="">
+            </h3>
+
+            <ul class="new_contents_list">
+                <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><!-- 1 -->
+                    <div class="new_contents_wrap">
+                        <img src="./images/content_01.png" alt="">
+                    </div>
+                    <p>
+                        오늘의 오브를 모아서
+                        <br>
+                        내 플레이리스트에 추가해요
+                    </p>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><!-- 2 -->
+                    <div class="new_contents_wrap">
+                        <img src="./images/content_02.png" alt="">
+                    </div>
+                    <p>
+                        매일마다 북테크 AI가
+                        <br>
+                        당신의 독서 취향을 분석해요
+                    </p>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800"><!-- 3 -->
+                    <div class="new_contents_wrap">
+                        <img src="./images/content_03.png" alt="">
+                    </div>
+                    <p>
+                        다른 오브워너를 팔로우하고
+                        <br>
+                        서로의 플레이리스트를 공유해요
+                    </p>
+                </li>
+            </ul>
+        </div><!-- #section6 -->
+
+        <div id="section7">
+            <h3 data-aos="fade-down" data-aos-duration="1500">북테크 AI</h3>
+            <p data-aos="fade-down" data-aos-duration="1500" data-aos-delay="400">
+                북테크 AI가
+                <br>당신의 독서 취향을 분석하고 있어요
+                <br>잠시만 기다려주세요...
+            </p>
+            <div class="book_tech_img_wrap" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                <img src="./images/book_tech_ai.png" alt="">
+            </div>
+            <a href="#" class="book_tech_btn" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">결과 확인하기 →</a>
+        </div><!-- #section7 -->
+
+        <div id="section8">
+            <h3 data-aos="fade-down" data-aos-duration="1500">플레이리스트</h3>
+            <div class="section8_inner">
+                <!-- 1. 메인 플레이어 -->
+                <div class="section8-player" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">
+                    <div class="section8-cover-wrapper">
+                        <img src="./images/playlist_book1.png" alt="">
+                    </div>
+                    <div class="s8-title">밀레니엄 1: 여자를 증오한 남자들</div>
+                    <div class="s8-author">스티그 라르손</div>
+                </div>
+
+                <!-- 2. 추천 리스트 및 탭 (Middle - Restored Style) -->
+                <div class="section8-content" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                    <ul class="s8-tabs">
+                        <li>얼죽아를 위한 스릴러</li>
+                        <li>TOP 10 오브워너</li>
+                        <li>TOP 10 플레이리스트</li>
+                        <li>고요한</li>
+                    </ul>
+
+                    <ul class="s8-series-list">
+                        <!-- 카드 1 -->
+                        <li>
+                            <div class="s8-series-wrap">
+                                <img src="./images/playlist_01.png" alt="Book 1">
+                            </div>
+                            <div class="s8-series-info">
+                                <div class="s8-user">
+                                    <img src="./images/icon-reviewer-dog-small.svg" alt="">
+                                    <p>‘몽땅짜리지우개’ 님의 플레이리스트</p>
+                                </div>
+                                <h4>별 한 점 없는 겨울밤 읽는
+                                    <br>북유럽 스릴러 소설
+                                </h4>
+                                <p class="s8-series-tags">#북유럽감성 #밀레니엄 시리즈</p>
+                            </div>
+                        </li>
+                        <!-- 카드 2 -->
+                        <li>
+                            <div class="s8-series-wrap">
+                                <img src="./images/playlist_02.png" alt="Book 1">
+                            </div>
+                            <div class="s8-series-info">
+                                <div class="s8-user">
+                                    <img src="./images/icon-reviewer-duck-small.svg" alt="">
+                                    <p>‘오리가아싸의모험’ 님의 플레이리스트</p>
+                                </div>
+                                <h4>눈보라 몰아치는 밤에 만나는
+                                    <br>차가운 핏빛 미스터리
+                                </h4>
+                                <p class="s8-series-tags">#스노우맨 #스릴러추천 #해리홀레시리즈</p>
+                            </div>
+                        </li>
+                        <!-- 카드 3 -->
+                        <li>
+                            <div class="s8-series-wrap">
+                                <img src="./images/playlist_03.png" alt="Book 1">
+                            </div>
+                            <div class="s8-series-info">
+                                <div class="s8-user">
+                                    <img src="./images/icon-reviewer-book-small.svg" alt="">
+                                    <p>‘북팅이밤팅이’ 님의 플레이리스트</p>
+                                </div>
+                                <h4>얼음 호수처럼 고요한 밤에
+                                    <br>읽는 섬뜩한 심리 서스펜스
+                                </h4>
+                                <p class="s8-series-tags"> #LA느와르 #형사해리보슈시리즈</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <!-- 3. 트랙 리스트 (Right) -->
+                <div class="section8-track" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="800">
+                    <p class="section8-track-title">
+                        Track List
+                    </p>
+
+                    <div class="s8-track-container">
+                        <ul class="s8-track-list">
+                            <li>
+                                <span>1</span>
+                                <ul class="s8-track-detail">
+                                    <li>밀레니엄 1: 여자를 증오한 남자들</p>
+                                    <li>스티그 라르손</p>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>2</span>
+                                <ul class="s8-track-detail">
+                                    <li>밀레니엄 2: 불을 가지고 노는 소녀</p>
+                                    <li>스티그 라르손</p>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>3</span>
+                                <ul class="s8-track-detail">
+                                    <li>밀레니엄 3: 벌집을 발로 찬 소녀</p>
+                                    <li>스티그 라르손</p>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>4</span>
+                                <ul class="s8-track-detail">
+                                    <li>밀레니엄 4: 거미줄에 걸린 소녀</p>
+                                    <li>다비드 라게르크란츠</p>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>5</span>
+                                <ul class="s8-track-detail">
+                                    <li>밀레니엄 5: 받은 만큼 복수하는 소녀</p>
+                                    <li>다비드 라게르크란츠</p>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>6</span>
+                                <ul class="s8-track-detail">
+                                    <li>밀레니엄 6: 두 번 사는 소녀</p>
+                                    <li>다비드 라게르크란츠</p>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- #section8 -->
+        <div id="slide-section" data-aos="fade-up" data-aos-duration="1500">
+            <div class="card_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_01.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_02.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_03.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_04.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_01.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_02.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_03.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_04.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_01.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_02.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_03.png" class="slide-card-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/card_slide_04.png" class="slide-card-image">
+                    </div>
+                </div>
+            </div>
+        </div><!-- #slide-section -->
+
+        <div id="section9">
+            <h3 data-aos="fade-down" data-aos-duration="1500">서치라이트</h3>
+            <div class="news_wrap">
+                <div class="news_left" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">
+                    <span class="news_title">데일리 뉴스</span>
+                    <h4>나로 살 결심: 개인주의자 문유석의 두번째 선택</h4>
+                    <div class="reporter_id">
+                        <div>
+                            <img src="./images/news_icon_01.png" alt="">
+                            <p>오브원공식계정</p>
+                            <img src="./images/news_icon_02.png" alt="">
+                            <span>@ofonebooks</span>
+                        </div>
+                        <a href="#" class="follow_btn">팔로우 +</a>
+                    </div>
+                    <div class="news_img_wrap">
+                        <img src="./images/news_img_01.png" alt="">
+                    </div>
+                    <div class="news_list">
+                        <ul class="news_check">
+                            <li>
+                                <img src="./images/favorite.png" alt="">
+                            </li>
+                            <li>
+                                397
+                            </li>
+                            <li>
+                                <img src="./images/bookmark.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./images/ios_share.png" alt="">
+                            </li>
+                            <li>
+                                <img src="./images/more_horiz.png" alt="">
+                            </li>
+                        </ul>
+
+                        <ul class="news_reader">
+                            <li>2025.12.09</li>
+                            <li> • </li>
+                            <li>읽음 2,397</li>
+                        </ul>
+                    </div>
+                    <div class="news_text">
+                        <h5>
+                            판사에서 드라마 작가로, 그리고 ‘나로 살 결심’으로
+                            <br>
+                            개인주의자 문유석의 두 번째 선택
+                        </h5>
+                        <p>
+                            23년간 법복을 입었던 한 사람이 어느 날 판을 갈아엎듯 직업과 삶의 좌표를 바꿨다.
+                            <br><br>
+                            『개인주의자 선언』으로 “합리적 개인주의”를 화두로 던졌던 전직 부장판사이자 드라마 작가 문유석. 그가 판사를 떠난 이후 5년, 두 번째 삶의 진짜 얼굴을 담은
+                            신간 에세이 『나로 살 결심』(문학동네)이 나왔다.
+                            <br><br>
+                            출간과 동시에 중앙일보·한겨레·한국경제 등 주요 일간지의 11월 추천도서로 연이어 선정되며 “인생 2막 서사의 결정판”이라는 평가를 얻고 있다.
+                            <br><br>
+                            온라인 서점에서는 출간일(11월 14일)을 기점으로 ‘이 달의 주목도서’, ‘미디어 추천도서’ 코너 전면에 이름을 올렸고 244쪽 분량의 이 에세이는 “판사에서
+                            작가로, 그리고 온전히 ‘나’로” 살아가기까지의 고민과 시행착오를 숨김없이 펼쳐 보인다.
+                            <br><br>
+                            #문유석 #나로살결심 #신간 #에세이 #오브원서치라이트
+                        </p>
+                    </div>
+                </div><!-- .news_left -->
+
+                <div class="news_right" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="800">
+                    <div class="news_img_wrap">
+                        <img src="./images/news_img_02.png" alt="">
+                    </div>
+                    <ul class="news_keywords">
+                        <li>문유석법학자</li>
+                        <li>나로살결심</li>
+                        <li>오브원신간</li>
+                        <li>감성에세이추천</li>
+                    </ul>
+                    <ul class="news_book_list">
+                        <li><img src="./images/new_tap_01.png" alt=""></li>
+                        <li><img src="./images/new_tap_01.png" alt=""></li>
+                        <li><img src="./images/new_tap_01.png" alt=""></li>
+                    </ul>
+                </div><!-- .news_right -->
+            </div><!-- .new_wrap -->
+        </div><!-- #section9 -->
+
+        <div id="section10">
+            <h3 data-aos="fade-down" data-aos-duration="1500">북티클럽</h3>
+            <div class="club">
+                <ul class="club_left" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">
+                    <li>
+                        <img src="./images/club_card_01.png" alt="">
+                    </li>
+
+                    <li class="club_text">
+                        <span>북티클럽</span>
+                        <h4>
+                            북티클럽 모임의 밤, 서로의 TMI 대신
+                            <br>
+                            우리가 요즘 꽂힌 문장을 먼저 공유해보기
+                        </h4>
+                        <div class="club_id">
+                            <div>
+                                <img src="./images/news_icon_01.png" alt="">
+                                <p>오브원공식계정</p>
+                                <img src="./images/news_icon_02.png" alt="">
+                                <span>@ofonebooks</span>
+                            </div>
+
+                        </div>
+                        <p>
+                            -우리는 더 이상 ‘정답’ 말고 ‘조합’을 찾는 세대. 회사원+크리에이터+독서 모임 호스트,
+                            <br>
+                            복수의 자아를 겹쳐 입는 방식 자체가 우리의 에스테틱이다.
+                        </p>
+                        <div class="club_btn">
+                            <a href="#">화제의 뉴스레터 ‘2026 오브원 텍스트힙 트렌드 리포트’ 확인해요!</a>
+                            <a href="#">구독하기 →</a>
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <img src="./images/club_card_04.png" alt="">
+                    </li>
+
+                </ul>
+                <ul class="club_right" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="800">
+                    <li>
+                        <img src="./images/club_card_02.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./images/club_card_03.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./images/club_card_05.png" alt="">
+                    </li>
+                </ul>
+            </div><!-- .club -->
+        </div><!-- #section10 -->
+
+        <div id="section11">
+            <div class="section11_inner">
+                <h3 data-aos="fade-down" data-aos-duration="1500">회사소개</h3>
+                <div class="company_list">
+                    <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">OUR VISION</h4>
+                    <ul class="top-list">
+                        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                            <span>목적</span>
+                            <p>VIRTUS°</p>
+                        </li>
+                        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800">
+                            <span>습관</span>
+                            <p>HABITUS°</p>
+                        </li>
+                        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
+                            <span>실천</span>
+                            <p>PRAXIS°</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flow">
+                    <!-- 01 VIRTUS Row -->
+                    <div class="row left">
+                        <div class="card" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
+                            <img src="./images/company_01.png" alt="">
+                        </div>
+                        <div class="info" data-aos="fade-left" data-aos-duration="1400" data-aos-delay="400">
+                            <p class="info-num">01</p>
+                            <p class="info-cat">VIRTUS</p>
+                            <p class="info-tit">정직한 큐레이션 역량의 함양</p>
+                        </div>
+                    </div>
+
+                    <!-- 02 HABITUS Row -->
+                    <div class="row center">
+                        <div class="card" data-aos="fade-left" data-aos-duration="1600" data-aos-delay="400">
+                            <img src="./images/company_02.png" alt="">
+                        </div>
+                        <div class="info" data-aos="fade-right" data-aos-duration="1800" data-aos-delay="400">
+                            <p class="info-num">02</p>
+                            <p class="info-cat">HABITUS</p>
+                            <p class="info-tit">지속가능한 학습 문화 형성</p>
+                        </div>
+                    </div>
+
+                    <!-- 03 PRAXIS Row -->
+                    <div class="row right">
+                        <div class="card" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="400">
+                            <img src="./images/company_03.png" alt="">
+                        </div>
+                        <div class="info" data-aos="fade-left" data-aos-duration="2200" data-aos-delay="400">
+                            <p class="info-num">03</p>
+                            <p class="info-cat">PRAXIS</p>
+                            <p class="info-tit">가벼운 독서 습관 실천</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map_title" data-aos="fade-right" data-aos-duration="1500" >
+                    <p class="info-cat">Ofone Books</p>
+                    <p class="info-tit">Contact°</p>
+                </div>
+
+                <div class="contact-card" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                    <div class="contact-info">
+                        <p class="info-intro">오늘의 북스는 더 쉽고 재밌는 읽기 경험을 설계하는<br>디지털 독서 콘텐츠 플랫폼입니다.</p>
+
+                        <p class="info-label">eBook·오디오북·구독형 독서 서비스를 통해<br>당신의 일상과 독서를 연결합니다.</p>
+
+                        <ul class="info-list">
+                            <li><span class="info-label">문의:</span></li>
+                            <li class="info-item">주소: 서울시 강남구 테헤란로 000 (이모빌딩)</li>
+                            <li class="info-item">이메일: help@ofonebooks.com</li>
+                            <li class="info-item">B2B: b2b@ofonebooks.com</li>
+                            <li class="info-item">대표전화: 02-0000-0000</li>
+                        </ul>
+
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">
+                                <img src="./images/map_icon_01.png" alt="">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="./images/map_icon_02.png" alt="">
+                            </a>
+                            <a href="#" class="social-icon">
+                                <img src="./images/map_icon_03.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6330.386912370652!2d127.04084909010896!3d37.50335516246639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca405861e4a67%3A0x73ec1c047764908!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDthYztl6TrnoDroZw!5e0!3m2!1sko!2skr!4v1768736981207!5m2!1sko!2skr"
+                            width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="character-container" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+            <div class="character">
+                <img src="./images/footer_charater.png" alt="">
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="footer-inner">
+                <h1 class="f-logo">
+                    <img src="./images/footer_logo.png" alt="">
+                </h1>
+                <div class="footer_list">
+                    <div class="f-nav">
+                        <a href="#">회사소개</a>
+                        <a href="#">고객센터</a>
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                    </div>
+                    <p class="f-info">
+                        상호: 오늘북스ㅣ대표: 홍길동ㅣ사업자등록번호: 000-00-00000<br>
+                        © 오늘북스 Ofonebooks Co., Ltd. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div><!-- section11 -->
+    </div> <!-- #wrap -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 제어구문 연결 -->
+    <script src="js/script.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
